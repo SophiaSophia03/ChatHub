@@ -5,7 +5,10 @@ import "./lib/db.js"
 import authRoutes from "./routes/auth.route.js"
 
 const app = express();
+import cookieParser from "cookie-parser";
 const PORT = process.env.PORT;
+
+app.use(cookieParser());
 
 // Middleware to parse JSON
 app.use(express.json());
