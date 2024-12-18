@@ -7,7 +7,7 @@ export const authenticateUser = async(req,res,next)=> {
   try {
     const token = req.cookies.jwt;
     if(!token) {
-      return res.send(401).json({message:"Unauthourized Access: Authentication token required"});
+      return res.status(401).json({message:"Unauthourized Access: Authentication token required"});
     }
     const decoded = jwt.verify(token, process.env.JWT_SECRET)
       if(!decoded){
@@ -21,6 +21,9 @@ export const authenticateUser = async(req,res,next)=> {
       next();
 
   } catch (error) {
-
+    console.error("Error in authentication middleware:", error.message);
+    return res.status(401).json({
+      message: "Unauthorized Access: Invalid token",
+    })
   }
 }
