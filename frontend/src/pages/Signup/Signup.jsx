@@ -45,15 +45,15 @@ function Signup() {
     }
   }
   return (
-    <div className="min-h-screen flex flex-col lg:flex-row ">
+    <div className="min-h-screen flex flex-col lg:flex-row lg:mt-8 mt-24 ">
       {/* left side */}
-      <div className="flex flex-col justify-center items-center p-8 sm:p-16 ml-16">
+      <div className="flex flex-col justify-center items-center p-8 sm:p-16 lg:ml-16">
         <div className="w-full mb-8">
           {/* logo and text */}
           <div className="text-center mb-8">
             <div className="flex flex-col justify-center items-center gap-2">
               <div className="flex items-center justify-center">
-                <img src={ChatIcon} alt="Chat Icon" className="w-[15%]"></img>
+                <img src={ChatIcon} alt="Chat Icon" className="w-[10%]"></img>
               </div>
               <h1 className="text-2xl font-bold mt-2">Create Account</h1>
               <p className=" text-lg font-normal text-slate-500">
@@ -133,7 +133,7 @@ function Signup() {
                 </button>
               </div>
             </div>
-            <button type="submit" className="btn btn-active btn-accent w-full" disabled={isSigningUp}>
+            <button type="submit" className="btn btn-active btn-accent w-full font-semibold text-xl" disabled={isSigningUp}>
               {isSigningUp ? (<> <Loader className='size-10 animate-spin' /> </>) : "Create Account"}
             </button>
           </form>
@@ -147,7 +147,7 @@ function Signup() {
         </div>
       </div>
       {/* right side */}
-      <div className="flex flex-col justify-center items-center p-8 sm:p-16 mb-8 ml-16">
+      <div className="flex flex-col justify-center items-center p-8 sm:p-16 mb-8 lg:ml-16">
       <Lottie animationData={animation} />
       <div className="text-center mb-8">
         <h1 className="font-bold text-2xl mb-4">Welcome to ChatHub</h1>
