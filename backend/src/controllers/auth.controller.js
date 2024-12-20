@@ -102,7 +102,7 @@ export const updateProfile = async(req,res)=> {
       return res.status(400).json({ message: "All fields are required!" });
     }
     const uploadResponse = await cloudinary.uploader.upload(profilePic);
-    const updatedUser = await User.finByIdAndUpdate(userId,{profilePic:uploadResponse.secure_url}, {new:true});
+    const updatedUser = await User.findByIdAndUpdate(userId,{profilePic:uploadResponse.secure_url}, {new:true});
     return res.status(200).json(updatedUser);
 
   } catch (error) {
