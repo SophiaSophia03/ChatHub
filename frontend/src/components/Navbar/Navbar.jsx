@@ -7,7 +7,7 @@ import { useAuthStore } from "../../store/useAuthStore";
 function Navbar() {
  const {logout,authUser} =  useAuthStore();
   return (
-    <header className="bg-zinc-200 fixed top-0 z-40 w-full">
+    <header className="bg-base-200 fixed top-0 z-40 w-full">
       <div className="container mx-auto lg:px-16 px-8 py-4 h-20">
         <div className="flex justify-between flex-row">
           <Link to={"/"} className="flex items-center gap-4 hover:opacity-80">
