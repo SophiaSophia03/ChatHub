@@ -5,7 +5,7 @@ import User from "../models/users.model.js";
 export const getUsers = async(req,res) => {
   try {
     const loggedInUserId = req.user._id;
-    const otherUsers = await User.findById({_id: {$ne:loggedInUserId}}).select("-password");
+    const otherUsers = await User.find({ _id: { $ne: loggedInUserId } }).select("-password");
     return res.status(201).json(otherUsers);
   } catch (error) {
     console.log("Error in getUsers controller:", error.message);
