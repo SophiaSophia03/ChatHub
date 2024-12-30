@@ -20,7 +20,7 @@ function Login() {
     login(formData);
   }
   return (
-    <div className="min-h-screen flex flex-col lg:flex-row lg:mt-8 mt-24 ">
+    <div className="min-h-screen flex flex-col lg:flex-row lg:mt-8 mt-16 ">
       {/* left side */}
       <div className="flex flex-col justify-center items-center p-8 sm:p-16 lg:ml-16">
         <div className="w-full mb-8">
