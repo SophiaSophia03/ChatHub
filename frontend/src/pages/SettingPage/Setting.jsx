@@ -1,7 +1,7 @@
 import React from 'react'
 import { useThemeStore } from '../../store/useThemeStore'
 import { Themes } from '../../constants';
-import {Send} from "lucide-react"
+import {Image, Send} from "lucide-react"
 
 const previewMsg = [
   {id:1, content:"Hey! How's it going?", isSent:false},
@@ -83,7 +83,8 @@ function Setting() {
             <input type='text'
             className='input input-bordered flex-1 text-sm h-10' value="This is a preview" placeholder='Type a message...' readOnly
             ></input>
-            <div className='btn btn-primary h-10 min-h-0'><Send size={18} /> </div>
+            <div className='btn btn-secondary btn-circle min-h-0'><Image size={18} /> </div>
+            <div className='btn btn-primary btn-circle min-h-0'><Send size={18} /> </div>
           </div>
           </div>
 

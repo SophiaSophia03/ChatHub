@@ -9,6 +9,7 @@ import msgRoutes from "./routes/msg.route.js"
 
 dotenv.config();
 const app = express();
+const server = http
 const PORT = process.env.PORT;
 
 // Middleware to parse JSON
